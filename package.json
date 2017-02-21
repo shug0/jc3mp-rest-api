@@ -1,20 +1,25 @@
 {
+    "author": "Thomas Alberola",
+    "bugs": {
+        "url": "https://github.com/shug0/jc3mp-rest-api/issues"
+    },
     "dependencies": {
         "body-parser": "~1.16.0",
-        "cookie-parser": "~1.4.3",
         "debug": "~2.6.0",
-        "express": "~4.14.1",
-        "jade": "~1.11.0",
-        "morgan": "~1.7.0",
-        "serve-favicon": "~2.3.2",
-        "stylus": "0.54.5"
+        "express": "~4.14.1"
     },
+    "description": "Provide a REST API with your running server",
+    "homepage": "https://github.com/shug0/jc3mp-rest-api#readme",
+    "keywords": [],
+    "license": "ISC",
     "main": "main.js",
-    "name": "justrestadmin",
-    "private": true,
-    "scripts": {
-        "run_server": "node ./bin/www",
-        "start": "node ./bin/www"
+    "name": "jc3mp-rest-api",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shug0/jc3mp-rest-api.git"
     },
-    "version": "0.0.1"
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "1.0.0"
 }

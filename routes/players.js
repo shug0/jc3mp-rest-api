@@ -12,13 +12,14 @@ router.param('steamId', function (req, res, next, steamId) {
 });
 
 router.get('/:steamId', function (req, res, next) {
-  res.json(jcmp.players.find(player => player.client.steamId === req.params.steamId));
+  const player = jcmp.players.find(player => player.client.steamId === req.params.steamId);
+  player ? res.json(player) : res.json({ error: 'user not found'});
 });
 
 // ---------- Kick a user : give steamId
 router.get('/:steamId/kick', function (req, res, next) {
   const player = jcmp.players.find(player => player.client.steamId === req.params.steamId);
-  player.Kick('Kicked for fun (yolo) !')
+  player ? player.Kick('Kicked for fun (yolo) !') : res.json({ error: 'user not found'});
 });
 
 module.exports = router;
