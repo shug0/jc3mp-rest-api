@@ -5,7 +5,6 @@
     },
     "dependencies": {
         "body-parser": "~1.16.0",
-        "debug": "~2.6.0",
         "express": "~4.14.1"
     },
     "description": "Provide a REST API with your running server",

@@ -2,11 +2,14 @@ var express = require('express');
 var router = express.Router();
 
 // --------------- ROUTES --------------- //
-var index = require('./index');
-var players = require('./players');
+var players = require('./players/players');
 
 const loadRoutes = (app) => {
-  app.use('/', index);
+
+  app.use('/', router.get('/', function(req, res, next) {
+    res.json({ message: 'Nothing to see here sorry.' });
+  }));
+
   app.use('/players', players);
 }
 

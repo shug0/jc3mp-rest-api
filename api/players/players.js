@@ -6,11 +6,11 @@ router.get('/', function(req, res, next) {
   res.json(jcmp.players);
 });
 
-// ---------- Return a user by giving his steamId
 router.param('steamId', function (req, res, next, steamId) {
   next();
 });
 
+// ---------- Return a user by giving his steamId
 router.get('/:steamId', function (req, res, next) {
   const player = jcmp.players.find(player => player.client.steamId === req.params.steamId);
   player ? res.json(player) : res.json({ error: 'user not found'});
