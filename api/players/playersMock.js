@@ -1,12 +1,19 @@
 const _ = require('lodash');
 
-const playersMocks = [
-  { name: 'Shug0', client: { steamId: _.random(1, 99999999999)} },
-  { name: 'Zoski', client: { steamId: _.random(1, 99999999999)} },
-  { name: 'Scrutch', client: { steamId: _.random(1, 99999999999)} },
-  { name: 'Daft Spirit', client: { steamId: _.random(1, 99999999999)} },
-  { name: 'KevinDu33', client: { steamId: _.random(1, 99999999999)} },
+const pseudoList = [
+  'Shug0',
+  'Zoski',
+  'Scrutch',
+  'Daft Spirit',
+  'KevinDu33',
 ];
 
+const playersMocks = pseudoList.map((pseudo) => ({
+  name: pseudo,
+  client: {
+    steamId: _.random(1, 99999999999),
+    ping: _.random(1, 200)
+  }
+}));
 
 module.exports = playersMocks;
