@@ -1,5 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
+const playersMock = require('./playersMock');
+const jcmpMock = {
+  players: playersMock
+};
+
+const jcmp = jcmp ? jcmp : jcmpMock;
 
 // ---------- Return all users
 router.get('/', function(req, res, next) {

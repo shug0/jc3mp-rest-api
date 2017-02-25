@@ -11,6 +11,6 @@ const loadRoutes = (app) => {
   }));
 
   app.use('/players', players);
-}
+};
 
 module.exports = loadRoutes;

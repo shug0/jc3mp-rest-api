@@ -1,25 +1,27 @@
 {
-    "author": "Thomas Alberola",
-    "bugs": {
-        "url": "https://github.com/shug0/jc3mp-rest-api/issues"
-    },
-    "dependencies": {
-        "body-parser": "~1.16.0",
-        "cors": "^2.8.1",
-        "express": "~4.14.1"
-    },
-    "description": "Provide a REST API with your running server",
-    "homepage": "https://github.com/shug0/jc3mp-rest-api#readme",
-    "keywords": [],
-    "license": "ISC",
-    "main": "main.js",
-    "name": "jc3mp-rest-api",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/shug0/jc3mp-rest-api.git"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "version": "1.0.0"
+  "author": "Thomas Alberola",
+  "bugs": {
+    "url": "https://github.com/shug0/jc3mp-rest-api/issues"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cors": "^2.8.1",
+    "express": "~4.14.1",
+    "lodash": "^4.17.4"
+  },
+  "description": "Provide a REST API with your running server",
+  "homepage": "https://github.com/shug0/jc3mp-rest-api#readme",
+  "keywords": [],
+  "license": "ISC",
+  "main": "main.js",
+  "name": "jc3mp-rest-api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shug0/jc3mp-rest-api.git"
+  },
+  "scripts": {
+    "dev": "USE_MOCK=true node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
