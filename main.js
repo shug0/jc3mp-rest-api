@@ -1,6 +1,5 @@
 // Node modules
 const express = require('express');
-const path = require('path');
 const http = require('http');
 const cors = require('cors');
 
@@ -20,7 +19,7 @@ loadRoutes(app);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
@@ -32,5 +31,5 @@ app.use((err, req, res, next) => {
 });
 
 
-var server = http.createServer(app);
+const server = http.createServer(app);
 server.listen(port);
